@@ -1,1 +1,57 @@
-<p>signup works!</p>
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-purple">
+  <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+    <img class="mx-auto h-20 w-auto" src="../assets/img-login.png" alt="Your Company">
+    <h2 class="text-center text-2xl font-extrabold leading-9 tracking-tight text-white">Easy Media</h2>
+    <h2 class="text-center text-base font-semibold leading-9 tracking-tight text-blue-sky">Now, share is easy</h2>
+    <h2 class="text-center text-lg font-semibold leading-9 tracking-tight text-white">Sign Up</h2>
+  </div>
+
+  <div class="mt-1 sm:mx-auto sm:w-full sm:max-w-sm">
+    <form class="space-y-6" action="#" method="POST">
+      <div>
+        <label for="fullName" class="block text-sm font-medium leading-6 text-blue-dark">Full Name</label>
+        <div>
+          <input id="fullName" name="fullName" type="text" autocomplete="name" required
+            class="w-full text-sm border-b-2 border-gray-400 outline-none bg-purple text-white focus:border-blue-400"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium leading-6 text-blue-dark">Email</label>
+        <div>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="example@email.com"
+            class="w-full text-sm border-b-2 border-gray-400 outline-none bg-purple text-white focus:border-blue-400"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label for="password" class="block text-sm font-medium leading-6 text-blue-dark">Password</label>
+        <div>
+          <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="•••••••••"
+            class="w-full text-sm border-b-2 border-gray-400 outline-none bg-purple text-white focus:border-blue-400"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label for="passwordConfirm" class="block text-sm font-medium leading-6 text-blue-dark">Confirm Password</label>
+        <div class="mt-2">
+          <input id="passwordConfirm" name="passwordConfirm" type="password" autocomplete="current-password" required placeholder="•••••••••"
+            class="w-full text-sm border-b-2 border-gray-400 outline-none bg-purple text-white focus:border-blue-400"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="submit" class="flex w-full justify-center rounded-full bg-gradient-to-r from-cyan-500 to-violet-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-lg">SIGN UP</button>
+      </div>
+    </form>
+
+    <p class="mt-10 text-center text-sm text-gray-500">
+      Already have an account?
+      <a href="auth/login" class="font-semibold leading-6 text-blue-sky hover:text-indigo-500">Login</a>
+    </p>
+  </div>
+</div>
