@@ -6,6 +6,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { MyPostsComponent } from './posts/my-posts/my-posts.component';
 import { AllPostsComponent } from './posts/all-posts/all-posts.component';
 import { CreatePostComponent } from './posts/create-post/create-post.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { CreatePostComponent } from './posts/create-post/create-post.component';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    SharedModule
   ]
 })
 export class HomeModule { }

@@ -13,7 +13,9 @@ module.exports = {
       'purple-1000': '#8973D8',
       'white': '#FFFFFF',
       'blue-sky': '#48E3BE',
-      'blue-dark': '#0E2248'
+      'blue-sky-400': '#59bcdb',
+      'blue-dark': '#0E2248',
+      'gray-1000': '#666666'
     },
     borderColor: {
       'white-50': '#EAEAEA'
