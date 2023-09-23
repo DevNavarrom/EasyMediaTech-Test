@@ -1,4 +1,4 @@
-<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-purple">
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-purple-1000">
   <div class="sm:mx-auto sm:w-full sm:max-w-sm">
     <img class="mx-auto h-40 w-auto" src="../assets/img-login.png" alt="Your Company">
     <h2 class="mt-10 text-center text-2xl font-extrabold leading-9 tracking-tight text-white">Easy Media</h2>
@@ -7,28 +7,27 @@
   </div>
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-    <form class="space-y-6" action="#" method="POST">
-      <div>
-        <label for="email" class="block text-sm font-medium leading-6 text-blue-dark">Email</label>
-        <div class="mt-2">
-          <input id="email" name="email" type="email" autocomplete="email" required
-                    class="w-full p-2 text-sm border-b-2 border-gray-400 outline-none bg-purple text-white focus:border-blue-400"
-                    placeholder="example@email.com" />
-        </div>
+    <form class="space-y-6">
+      
+      <div class="relative z-0 w-full mb-6 group">
+        <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-white-50 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+        <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-blue-dark dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email</label>
       </div>
 
-      <div>
-        <div class="flex items-center justify-between">
-          <label for="password" class="block text-sm font-medium leading-6 text-blue-dark">Password</label>
-        </div>
-        <div class="mt-2">
-          <input id="password" name="password" type="password" placeholder="•••••••••" autocomplete="current-password" required class="w-full p-2 text-base border-b-2 border-gray-400 outline-none bg-purple text-white focus:border-blue-400">
-        </div>
+      <div class="relative z-0 w-full mb-6 group">
+        <input type="password" name="floating_password" id="floating_password" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-white-50 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+        <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-blue-dark dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
       </div>
 
       <div>
         <button type="submit" class="flex w-full justify-center rounded-full bg-gradient-to-r from-cyan-500 to-violet-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-lg">SIGN IN</button>
       </div>
+
     </form>
+
+    <p class="mt-10 text-center text-sm text-gray-300">
+      Don't have an account?
+      <a href="auth/signup" class="font-semibold leading-6 text-blue-sky hover:text-indigo-500">Sign up here</a>
+    </p>
   </div>
 </div>
