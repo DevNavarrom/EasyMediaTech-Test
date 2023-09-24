@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IMessages } from 'src/app/models/message.model';
 
 @Component({
   selector: 'app-card-message',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class CardMessageComponent {
 
+  @Input() modelMessage: IMessages;
+  
 }

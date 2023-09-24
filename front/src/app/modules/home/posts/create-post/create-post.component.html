@@ -3,22 +3,23 @@
     <h2 class="text-center text-2xl font-extrabold leading-9 tracking-tight text-white">Create message</h2>
   </div>
 
-  <div class="mt-4 sm:mx-auto sm:w-full sm:max-w-sm">
-    <div class="mb-6">
-      <label for="input-title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title message</label>
-      <input type="text" id="input-title" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-full bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your post title">
-      <p id="helper-text-explanation" class="pt-1 min-w-full text-xs text-right text-gray-600 dark:text-gray-400">20/30</p>
+  <form [formGroup]="postForm" (ngSubmit)="onSubmit(postForm)">
+    <div class="mt-4 sm:mx-auto sm:w-full sm:max-w-sm">
+      <div class="mb-6">
+        <label for="input-title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title message</label>
+        <input type="text" id="input-title" formControlName="title" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-full bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your post title">
+        <p id="helper-text-explanation" class="pt-1 min-w-full text-xs text-right text-gray-600 dark:text-gray-400">20/30</p>
+      </div>
+      <div>
+        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Message</label>
+        <textarea id="message" formControlName="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-2xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Create message for share with your friends."></textarea>
+        <p id="helper-text-explanation-2" class="pt-1 min-w-full text-xs text-right text-gray-600 dark:text-gray-400">100/300</p>
+      </div>
     </div>
-
-    <div>
-      <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Message</label>
-      <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-2xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Create message for share with your friends."></textarea>
-      <p id="helper-text-explanation-2" class="pt-1 min-w-full text-xs text-right text-gray-600 dark:text-gray-400">100/300</p>
+    <div class="flex justify-end items-center w-full pt-3">
+      <button type="submit" class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full shadow-xl text-sm w-auto sm:w-auto px-5 py-2.5 text-center bg-gradient-to-r from-purple-500 to-blue-sky">SHARE</button>
     </div>
-  </div>
-  <div class="flex justify-end items-center w-full pt-3">
-    <button type="submit" class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full shadow-xl text-sm w-auto sm:w-auto px-5 py-2.5 text-center bg-gradient-to-r from-purple-500 to-blue-sky">SHARE</button>
-  </div>
+  </form>
 </div>
 
-<app-card-message></app-card-message>
+<app-card-message [modelMessage]="postForm.value"></app-card-message>

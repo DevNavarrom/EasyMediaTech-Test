@@ -7,6 +7,7 @@ import { MyPostsComponent } from './posts/my-posts/my-posts.component';
 import { AllPostsComponent } from './posts/all-posts/all-posts.component';
 import { CreatePostComponent } from './posts/create-post/create-post.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class HomeModule { }
