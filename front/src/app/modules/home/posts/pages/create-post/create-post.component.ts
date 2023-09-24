@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { TypeNotification } from 'src/app/utils/types';
 
 @Component({
   selector: 'app-create-post',
@@ -8,6 +9,10 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class CreatePostComponent implements OnInit {
   postForm: FormGroup;
+
+  isModalOpen: boolean = false;
+  msgNotification: string = "Post Create";
+  typeNotify: TypeNotification = 'success';
 
   constructor(private fb: FormBuilder) {}
 
@@ -21,9 +26,14 @@ export class CreatePostComponent implements OnInit {
     )
   }
 
+  handleOpenModal(value: boolean): void {
+    this.isModalOpen = value;
+    console.log(this.isModalOpen);
+  }
+
   onSubmit(form: FormGroup): void {
     console.log(form.value);
-    
+    this.handleOpenModal(true);
   }
 
 }

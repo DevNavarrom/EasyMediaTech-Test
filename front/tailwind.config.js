@@ -10,12 +10,13 @@ module.exports = {
       },
     },
     colors: {
-      'purple-1000': '#8973D8',
+      'purple-1000': '#9B8ADB',
       'white': '#FFFFFF',
-      'blue-sky': '#48E3BE',
+      'blue-sky': '#58BCDB',
       'blue-sky-400': '#59bcdb',
       'blue-dark': '#0E2248',
-      'gray-1000': '#666666'
+      'gray-1000': '#666666',
+      'fucsia': '#C646AA'
     },
     borderColor: {
       'white-50': '#EAEAEA'

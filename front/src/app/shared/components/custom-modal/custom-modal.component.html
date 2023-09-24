@@ -1,0 +1,30 @@
+<div class="fixed inset-0 flex items-center justify-center z-50">
+  <div class="modal-overlay fixed inset-0 bg-black opacity-60"></div>
+  <div id="popup-modal" tabindex="-1" class="fixed top-40 left-0 right-0 z-50 p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full max-w-md max-h-full">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button type="button" (click)="handleClose()" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+            <div class="p-6 text-center">
+                <ng-template [ngIf]="typeMessage==='success'">
+                  <svg class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M37.9142 0C17.0235 0 0 17.0235 0 37.9142C0 58.8049 17.0235 75.8283 37.9142 75.8283C58.8049 75.8283 75.8283 58.8049 75.8283 37.9142C75.8283 17.0235 58.8049 0 37.9142 0ZM56.0371 29.1939L34.5398 50.6912C34.009 51.222 33.2886 51.5253 32.5303 51.5253C31.7721 51.5253 31.0517 51.222 30.5209 50.6912L19.7912 39.9615C18.6917 38.862 18.6917 37.0421 19.7912 35.9426C20.8907 34.8431 22.7106 34.8431 23.8101 35.9426L32.5303 44.6629L52.0182 25.175C53.1177 24.0755 54.9376 24.0755 56.0371 25.175C57.1366 26.2745 57.1366 28.0565 56.0371 29.1939Z" fill="#58BCDB"/>
+                  </svg>
+                </ng-template>
+                <ng-template [ngIf]="typeMessage==='error'">
+                  <svg class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M36.8857 0C16.5617 0 0 16.5617 0 36.8857C0 57.2098 16.5617 73.7715 36.8857 73.7715C57.2098 73.7715 73.7715 57.2098 73.7715 36.8857C73.7715 16.5617 57.2098 0 36.8857 0ZM49.2794 45.3695C50.349 46.4392 50.349 48.2097 49.2794 49.2794C48.7261 49.8326 48.0252 50.0908 47.3244 50.0908C46.6236 50.0908 45.9228 49.8326 45.3695 49.2794L36.8857 40.7956L28.402 49.2794C27.8487 49.8326 27.1479 50.0908 26.4471 50.0908C25.7462 50.0908 25.0454 49.8326 24.4921 49.2794C23.4224 48.2097 23.4224 46.4392 24.4921 45.3695L32.9759 36.8857L24.4921 28.402C23.4224 27.3323 23.4224 25.5618 24.4921 24.4921C25.5618 23.4224 27.3323 23.4224 28.402 24.4921L36.8857 32.9759L45.3695 24.4921C46.4392 23.4224 48.2097 23.4224 49.2794 24.4921C50.349 25.5618 50.349 27.3323 49.2794 28.402L40.7956 36.8857L49.2794 45.3695Z" fill="#C646AA"/>
+                  </svg>                    
+                </ng-template>
+                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">{{message}}</h3>
+                
+                <button type="button" (click)="handleClose()" class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full shadow-xl text-sm w-auto sm:w-auto px-10 py-2.5 text-center bg-gradient-to-r from-blue-sky to-fucsia">OK</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
