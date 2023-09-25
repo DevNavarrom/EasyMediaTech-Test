@@ -8,6 +8,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CreatePostComponent } from './posts/pages/create-post/create-post.component';
 import { AllPostsComponent } from './posts/pages/all-posts/all-posts.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AllPostsComponent } from './posts/pages/all-posts/all-posts.component';
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class HomeModule { }
