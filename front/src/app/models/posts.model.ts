@@ -5,4 +5,5 @@ export interface IPost {
   userId?:    number;
   tags?:      string[];
   reactions?: number;
+  created?:   string;
 }

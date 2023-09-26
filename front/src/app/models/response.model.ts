@@ -1,4 +1,6 @@
-export class Response<T> {
-  status!: string;
-  data!: T;
+export class ResponsePosts<T> {
+  limit!: number;
+  posts!: T;
+  skip!: number;
+  total!: number;
 }

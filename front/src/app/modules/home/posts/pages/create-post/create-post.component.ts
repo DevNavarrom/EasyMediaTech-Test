@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TypeNotification } from 'src/app/utils/types';
 
 @Component({
@@ -20,7 +20,7 @@ export class CreatePostComponent implements OnInit {
     this.postForm = this.fb.group(
       {
         title: ['', [Validators.required, Validators.minLength(20), Validators.maxLength(30)]],
-        message: ['', [Validators.required, Validators.minLength(100), Validators.maxLength(300)]],
+        body: ['', [Validators.required, Validators.minLength(100), Validators.maxLength(300)]],
         created: [new Date().toString()]
       }
     )

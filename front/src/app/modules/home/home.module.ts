@@ -5,10 +5,11 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MyPostsComponent } from './posts/pages/my-posts/my-posts.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreatePostComponent } from './posts/pages/create-post/create-post.component';
 import { AllPostsComponent } from './posts/pages/all-posts/all-posts.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from './posts/components/search/search.component';
 
 
 @NgModule({
@@ -16,14 +17,16 @@ import { HttpClientModule } from '@angular/common/http';
     HomePageComponent,
     CreatePostComponent,
     MyPostsComponent,
-    AllPostsComponent
+    AllPostsComponent,
+    SearchComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class HomeModule { }

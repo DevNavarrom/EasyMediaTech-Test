@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment.development';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { IPost } from 'src/app/models/posts.model';
-import { Response } from 'src/app/models/response.model';
+import { ResponsePosts } from 'src/app/models/response.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,16 +15,18 @@ export class PostsService {
 
   constructor(private http: HttpClient) { }
 
-  getAllPosts(): Observable<Response<IPost[]>> {
-    return this.http.get<Response<IPost[]>>(this.URL+'posts/')
+  getAllPosts$(): Observable<ResponsePosts<IPost[]>> {
+    return this.http.get<ResponsePosts<IPost[]>>(`${this.URL}posts/`).pipe(
+      map((data: ResponsePosts<IPost[]>) => data )
+    );
   }
 
-  getPostsByUser(id: string): Observable<Response<IPost[]>> {
-    return this.http.get<Response<IPost[]>>(this.URL+'posts/'+id);
+  getPostsByUser(id: string): Observable<ResponsePosts<IPost[]>> {
+    return this.http.get<ResponsePosts<IPost[]>>(`${this.URL}posts/${id}`);
   }
 
-  addNewPost(post: IPost): Observable<Response<IPost>> {
-    return this.http.post<Response<IPost>>(this.URL, {post});
+  addNewPost(post: IPost): Observable<ResponsePosts<IPost>> {
+    return this.http.post<ResponsePosts<IPost>>(`${this.URL}posts/add`, {post});
   }
   
 }

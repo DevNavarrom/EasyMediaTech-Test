@@ -12,7 +12,7 @@
       </div>
       <div>
         <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Message</label>
-        <textarea id="message" formControlName="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-2xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Create message for share with your friends."></textarea>
+        <textarea id="message" formControlName="body" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-2xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Create message for share with your friends."></textarea>
         <p id="helper-text-explanation-2" class="pt-1 min-w-full text-xs text-right text-gray-600 dark:text-gray-400">100/300</p>
       </div>
     </div>
@@ -31,5 +31,5 @@
 </div>
 
 <div class="flex flex-col justify-center items-center">
-  <app-card-message [modelMessage]="postForm.value"></app-card-message>
+  <app-card-message [modelPosts]="postForm.value"></app-card-message>
 </div>
